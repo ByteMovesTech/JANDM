@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="center">
+    <h2>Enter the password ❤️</h2>
+    <input type="password" id="pass">
+    <button onclick="checkPass()">Enter</button>
+    <p id="msg"></p>
+  </div>
+
+<script>
+function checkPass() {
+  const pass = document.getElementById("pass").value.toLowerCase();
+
+  if (pass === "0417") { // change later
+    window.location.href = "hunt.html";
+  } else {
+    document.getElementById("msg").innerText =
+      "Hmm… try again ❤️";
+  }
+}
+</script>
+</body>
+</html>
