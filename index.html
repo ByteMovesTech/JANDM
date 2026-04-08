@@ -1,1 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For You ❤️</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="center">
+    <h1>Something is waiting for you… ❤️</h1>
+    <h2 id="countdown"></h2>
+  </div>
 
+<script>
+const targetDate = new Date("April 17, 2026 00:00:00").getTime();
+
+setInterval(() => {
+  const now = new Date().getTime();
+  const distance = targetDate - now;
+
+  if (distance <= 0) {
+    window.location.href = "login.html";
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+
+  document.getElementById("countdown").innerText =
+    `${days} days, ${hours} hours`;
+}, 1000);
+</script>
+</body>
+</html>
