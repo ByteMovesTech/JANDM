@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,12 +17,21 @@
       text-align: center;
     }
     .center {
+      width: 100%;
+      max-width: 400px;
       margin: 0 20px;
+      text-align: center;
+    }
+    #question {
+      font-size: 26px;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 20px;
     }
     input {
       padding: 10px;
       margin-top: 15px;
-      width: 200px;
+      width: 100%;
       border-radius: 6px;
       border: none;
     }
@@ -49,7 +57,7 @@
 </head>
 <body>
   <div class="center">
-    <h2 id="question"></h2>
+    <h2 id="question">Loading question...</h2>
     <input type="text" id="answer" placeholder="Type your answer...">
     <br>
     <button onclick="submitAnswer()">Submit</button>
