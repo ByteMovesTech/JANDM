@@ -1,17 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Adventure ❤️</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ff6f91, #ff9671);
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+    .center {
+      margin: 0 20px;
+    }
+    input {
+      padding: 10px;
+      margin-top: 15px;
+      width: 200px;
+      border-radius: 6px;
+      border: none;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 15px;
+      cursor: pointer;
+      background-color: #fff;
+      color: #ff6f91;
+      border: none;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #ffe6e1;
+    }
+    #hint {
+      margin-top: 10px;
+      font-style: italic;
+      color: #ffe6e1;
+    }
+  </style>
 </head>
 <body>
   <div class="center">
     <h2 id="question"></h2>
-    <input id="answer">
+    <input type="text" id="answer" placeholder="Type your answer...">
+    <br>
     <button onclick="submitAnswer()">Submit</button>
     <p id="hint"></p>
   </div>
-
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
