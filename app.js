@@ -2,7 +2,7 @@ const questions = [
   {
     question: "Where did our story first begin?",
     answers: ["reddit", "Reddit", "online"],
-    hint: "It was something unexpected ❤️",
+    hint: "Boo Chiefs. Go Steelers! 💛🖤 ",
     memory: "I am so thankful that you found me. I was absolutely smitten from the very beginning. That is where everything started…"
   },
   {
@@ -19,16 +19,16 @@ const questions = [
 
   },
   {
-    question: "What year did we become 'us'?",
-    answers: ["2024", "2025", "two years ago"],
-    hint: "Think back to when everything changed for us...",
-    memory: "That was the year everything shifted."
+    question: "There is something that inreally want to get for you, give you. Do you know what it is??",
+    answers: ["edible eddie", "Eddie", "printer"],
+    hint: "Think about your cookies...",
+    memory: "There are so many things that I would love to do for you. This is just one of the many. "
   },
   {
-    question: "What is something I always say to you?",
-    answers: ["beautiful", "my love", "love you", "babe", "jaclyn"],
-    hint: "It’s usually something simple… but always true ❤️",
-    memory: "Because you are all of those things to me."
+    question: "What is something I always call you?",
+    answers: ["beautiful", "my love", "baby", "babe", "jac", "love"],
+    hint: "The many cute names I havve for you. ❤️",
+    memory: "Because I absolutely cherish you."
   },
   {
     question: "What are we celebrating today?",
