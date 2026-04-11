@@ -1,9 +1,9 @@
 const questions = [
   {
     question: "Where did our story first begin?",
-    answers: ["reddit", "r/relationship_advice", "online"],
-    hint: "It wasn’t a dating app… it was something unexpected ❤️",
-    memory: "That random place is where everything started…"
+    answers: ["reddit", "Reddit", "online"],
+    hint: "It was something unexpected ❤️",
+    memory: "I am so thankful that you found me. I was absolutely smitten. That is where everything started…"
   },
   {
     question: "What song will always remind me of you?",
@@ -14,7 +14,9 @@ const questions = [
       "miss a thing"
     ],
     hint: "Aerosmith… think of the song I associate with you ❤️",
-    memory: "Every time I hear this, I think of you."
+    memory: "Every time I hear this, I think of you. When we kinda started tonput together a playlist, it was a song you added. That makes it even more special for me. The lyrics also hit hard how I feel about you. I hate saying goodnight."      
+      
+
   },
   {
     question: "What year did we become 'us'?",
