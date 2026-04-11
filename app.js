@@ -1,3 +1,4 @@
+console.log("APP JS IS LOADED");
 const questions = [
   {
     question: "Where did our story first begin?",
