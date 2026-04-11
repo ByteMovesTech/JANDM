@@ -14,7 +14,7 @@ const questions = [
       "miss a thing"
     ],
     hint: "Aerosmith… think of the song I associate with you ❤️",
-    memory: "Every time I hear this, I think of you. When we kinda started to put together a playlist, it was a song you added. That makes it even more special for me. The lyrics also hit hard how I feel about you. I hate saying goodnight."
+    memory: "Every time I hear this, I think of you. When we started building our playlist, it was one you added. That makes it even more special to me. The lyrics also say exactly how I feel about you."
   },
   {
     question: "There is something that I really want to get for you, give you. Do you know what it is?",
@@ -41,3 +41,28 @@ const questions = [
     memory: "These puzzles are so much fun. I love working on them as a team and figuring them out. You are so smart."
   }
 ];
+
+let current = 0;
+
+function loadQuestion() {
+  const questionElement = document.getElementById("question");
+  const inputElement = document.getElementById("answer");
+  const hintElement = document.getElementById("hint");
+
+  if (!questionElement || !inputElement || !hintElement) return;
+
+  questionElement.innerText =
+    `Question ${current + 1} of ${questions.length}\n\n${questions[current].question}`;
+
+  inputElement.value = "";
+  hintElement.innerText = "";
+}
+
+function submitAnswer() {
+  const inputElement = document.getElementById("answer");
+  const hintElement = document.getElementById("hint");
+  const questionElement = document.getElementById("question");
+
+  if (!inputElement || !hintElement || !questionElement) return;
+
+  const input = inputElement.value.toLowerCase().trim();
