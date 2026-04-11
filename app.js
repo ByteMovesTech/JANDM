@@ -3,10 +3,10 @@ const questions = [
     question: "Where did our story first begin?",
     answers: ["reddit", "Reddit", "online"],
     hint: "It was something unexpected ❤️",
-    memory: "I am so thankful that you found me. I was absolutely smitten. That is where everything started…"
+    memory: "I am so thankful that you found me. I was absolutely smitten from the very beginning. That is where everything started…"
   },
   {
-    question: "What song will always remind me of you?",
+    question: "There are many many songs that remind me of you. However there is one in particular that has a very warm spot in my heart. What song will always remind me of you?",
     answers: [
       "i dont want to miss a thing",
       "dont want to miss a thing",
@@ -14,7 +14,7 @@ const questions = [
       "miss a thing"
     ],
     hint: "Aerosmith… think of the song I associate with you ❤️",
-    memory: "Every time I hear this, I think of you. When we kinda started tonput together a playlist, it was a song you added. That makes it even more special for me. The lyrics also hit hard how I feel about you. I hate saying goodnight."      
+    memory: "Every time I hear this, I think of you. When we kinda started to put together a playlist, it was a song you added. That makes it even more special for me. The lyrics also hit hard how I feel about you. I hate saying goodnight."      
       
 
   },
