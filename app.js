@@ -20,13 +20,13 @@ const questions = [
   },
   {
     question: "What is something I want to get for you?",
-    answers: ["edible eddie", "eddie"],
+    answers: ["edible eddie", "eddie", "printer"],
     hint: "Think cookies...",
     memory: "There are so many things I want to do for you."
   },
   {
     question: "What is something I always call you?",
-    answers: ["beautiful", "my love", "baby", "babe", "love"],
+    answers: ["beautiful", "my love", "baby", "babe", "love", "jac"],
     hint: "Cute names ❤️",
     memory: "Because I absolutely cherish you."
   },
