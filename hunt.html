@@ -1,68 +1,27 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Adventure ❤️</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #ff6f91, #ff9671);
-      font-family: Arial, sans-serif;
-      color: white;
-      text-align: center;
-    }
-    .center {
-      width: 100%;
-      max-width: 400px;
-      margin: 0 20px;
-      text-align: center;
-    }
-    #question {
-      font-size: 26px;
-      font-weight: bold;
-      color: white;
-      margin-bottom: 20px;
-    }
-    input {
-      padding: 10px;
-      margin-top: 15px;
-      width: 100%;
-      border-radius: 6px;
-      border: none;
-    }
-    button {
-      padding: 10px 20px;
-      margin-top: 15px;
-      cursor: pointer;
-      background-color: #fff;
-      color: #ff6f91;
-      border: none;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-    button:hover {
-      background-color: #ffe6e1;
-    }
-    #hint {
-      margin-top: 10px;
-      font-style: italic;
-      color: #ffe6e1;
-    }
-  </style>
 </head>
+
 <body>
   <div class="center">
-    <h2 id="question">Loading question...</h2>
-    <input type="text" id="answer" placeholder="Type your answer...">
-    <br>
-    <button onclick="submitAnswer()">Submit</button>
-    <p id="hint"></p>
+    <div class="card fade-in">
+
+      <h2 id="question">Loading question...</h2>
+
+      <input type="text" id="answer" placeholder="Type your answer...">
+
+      <button onclick="submitAnswer()">Submit</button>
+
+      <p id="hint"></p>
+
+    </div>
   </div>
+
   <script src="app.js"></script>
 </body>
 </html>
