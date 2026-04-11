@@ -1,13 +1,38 @@
 const questions = [
   {
-    question: "Where did our story begin?",
-    answers: ["reddit"],
-    hint: "Think back to that very first place we connected online..."
+    question: "Where did our story first begin?",
+    answers: ["reddit", "r/relationship_advice", "online"],
+    hint: "It wasn’t a dating app… it was something unexpected ❤️",
+    memory: "That random place is where everything started…"
   },
   {
-    question: "What song is ours?",
-    answers: ["miss a thing", "i dont want to miss a thing", "aerosmith"],
-    hint: "Aerosmith ❤️"
+    question: "What song will always remind me of you?",
+    answers: [
+      "i dont want to miss a thing",
+      "dont want to miss a thing",
+      "aerosmith",
+      "miss a thing"
+    ],
+    hint: "Aerosmith… think of the song I associate with you ❤️",
+    memory: "Every time I hear this, I think of you."
+  },
+  {
+    question: "What year did we become 'us'?",
+    answers: ["2024", "2025", "two years ago"],
+    hint: "Think back to when everything changed for us...",
+    memory: "That was the year everything shifted."
+  },
+  {
+    question: "What is something I always say to you?",
+    answers: ["beautiful", "my love", "love you", "babe", "jaclyn"],
+    hint: "It’s usually something simple… but always true ❤️",
+    memory: "Because you are all of those things to me."
+  },
+  {
+    question: "What are we celebrating today?",
+    answers: ["anniversary", "2 years", "two years", "our anniversary"],
+    hint: "A milestone of us ❤️",
+    memory: "And I wouldn’t trade these two years for anything."
   }
 ];
 
@@ -20,7 +45,9 @@ function loadQuestion() {
 
   if (!questionElement || !inputElement || !hintElement) return;
 
-  questionElement.innerText = `Question ${current + 1} of ${questions.length}\n\n${questions[current].question}`;
+  questionElement.innerText =
+    `Question ${current + 1} of ${questions.length}\n\n${questions[current].question}`;
+
   inputElement.value = "";
   hintElement.innerText = "";
 }
@@ -28,8 +55,9 @@ function loadQuestion() {
 function submitAnswer() {
   const inputElement = document.getElementById("answer");
   const hintElement = document.getElementById("hint");
+  const questionElement = document.getElementById("question");
 
-  if (!inputElement || !hintElement) return;
+  if (!inputElement || !hintElement || !questionElement) return;
 
   const input = inputElement.value.toLowerCase().trim();
 
@@ -43,14 +71,23 @@ function submitAnswer() {
     hintElement.innerText = "Correct ❤️";
 
     setTimeout(() => {
-      current++;
-
-      if (current >= questions.length) {
-        window.location.href = "final.html";
-      } else {
-        loadQuestion();
+      // Show memory moment briefly before moving on
+      if (questions[current].memory) {
+        hintElement.innerText = questions[current].memory;
       }
-    }, 800);
+
+      setTimeout(() => {
+        current++;
+
+        if (current >= questions.length) {
+          window.location.href = "final.html";
+        } else {
+          loadQuestion();
+        }
+      }, 900);
+
+    }, 600);
+
   } else {
     hintElement.innerText = questions[current].hint;
   }
