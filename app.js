@@ -1,4 +1,3 @@
-console.log("APP JS IS LOADED");
 const questions = [
   {
     question: "Where did our story first begin?",
@@ -15,7 +14,7 @@ const questions = [
       "miss a thing"
     ],
     hint: "Aerosmith… think of the song I associate with you ❤️",
-    memory: "Every time I hear this, I think of you. When we started building our playlist, it was one you added. That makes it even more special to me."
+    memory: "Every time I hear this, I think of you. When we started building our playlist, it was one you added. That makes it even more special to me. The lyrics also say exactly how I feel about you."
   },
   {
     question: "There is something that I really want to get for you, give you. Do you know what it is?",
@@ -36,66 +35,4 @@ const questions = [
     memory: "I will go anywhere with you. Wherever you are, is where I want to be."
   },
   {
-    question: "We love playing games together. One of our newer games is cryptic crosswords. Here is your clue: A dance mixed up in a country (6)?",
-    answers: ["canada"],
-    hint: "🎶 Oh... 🎶",
-    memory: "These puzzles are so much fun. I love working on them as a team and figuring them out. You are so smart."
-  }
-];
-
-let current = 0;
-
-function loadQuestion() {
-  const questionElement = document.getElementById("question");
-  const inputElement = document.getElementById("answer");
-  const hintElement = document.getElementById("hint");
-
-  if (!questionElement || !inputElement || !hintElement) return;
-
-  questionElement.innerText =
-    `Question ${current + 1} of ${questions.length}\n\n${questions[current].question}`;
-
-  inputElement.value = "";
-  hintElement.innerText = "";
-}
-
-function submitAnswer() {
-  const inputElement = document.getElementById("answer");
-  const hintElement = document.getElementById("hint");
-
-  if (!inputElement || !hintElement) return;
-
-  const input = inputElement.value.toLowerCase().trim();
-
-  const validAnswers = questions[current].answers;
-
-  const isCorrect = validAnswers.some(ans =>
-    input.includes(ans.toLowerCase())
-  );
-
-  if (isCorrect) {
-    hintElement.innerText = "Correct ❤️";
-
-    setTimeout(() => {
-      if (questions[current].memory) {
-        hintElement.innerText = questions[current].memory;
-      }
-
-      setTimeout(() => {
-        current++;
-
-        if (current >= questions.length) {
-          window.location.href = "final.html";
-        } else {
-          loadQuestion();
-        }
-      }, 900);
-
-    }, 600);
-
-  } else {
-    hintElement.innerText = questions[current].hint;
-  }
-}
-
-window.addEventListener("DOMContentLoaded", loadQuestion);
+    question: "We love
