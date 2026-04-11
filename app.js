@@ -1,12 +1,12 @@
 const questions = [
   {
     question: "Where did our story begin?",
-    answer: "reddit",
+    answers: ["reddit"],
     hint: "Think back to that very first place we connected online..."
   },
   {
     question: "What song is ours?",
-    answer: "miss a thing",
+    answers: ["miss a thing", "i dont want to miss a thing", "aerosmith"],
     hint: "Aerosmith ❤️"
   }
 ];
@@ -18,35 +18,42 @@ function loadQuestion() {
   const inputElement = document.getElementById("answer");
   const hintElement = document.getElementById("hint");
 
-  // Only update if elements exist
-  if (questionElement && inputElement && hintElement) {
-    questionElement.innerText = questions[current].question;
-    inputElement.value = "";
-    hintElement.innerText = "";
-  }
+  if (!questionElement || !inputElement || !hintElement) return;
+
+  questionElement.innerText = `Question ${current + 1} of ${questions.length}\n\n${questions[current].question}`;
+  inputElement.value = "";
+  hintElement.innerText = "";
 }
 
 function submitAnswer() {
   const inputElement = document.getElementById("answer");
   const hintElement = document.getElementById("hint");
-  const questionElement = document.getElementById("question");
 
-  if (!inputElement || !hintElement || !questionElement) return;
+  if (!inputElement || !hintElement) return;
 
   const input = inputElement.value.toLowerCase().trim();
 
-  if (input.includes(questions[current].answer)) {
-    current++;
-    if (current >= questions.length) {
-      window.location.href = "final.html";
-    } else {
-      loadQuestion();
-      hintElement.innerText = "You're getting closer ❤️";
-    }
+  const validAnswers = questions[current].answers;
+
+  const isCorrect = validAnswers.some(ans =>
+    input.includes(ans.toLowerCase())
+  );
+
+  if (isCorrect) {
+    hintElement.innerText = "Correct ❤️";
+
+    setTimeout(() => {
+      current++;
+
+      if (current >= questions.length) {
+        window.location.href = "final.html";
+      } else {
+        loadQuestion();
+      }
+    }, 800);
   } else {
     hintElement.innerText = questions[current].hint;
   }
 }
 
-// Wait until the page is fully loaded to populate the first question
 window.addEventListener("DOMContentLoaded", loadQuestion);
