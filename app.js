@@ -14,7 +14,7 @@ const questions = [
       "miss a thing"
     ],
     hint: "Aerosmith… think of the song I associate with you ❤️",
-    memory: "Every time I hear this, I think of you. When we started building our playlist, it was one you added. That makes it even more special to me. The lyrics also say exactly how I feel about you."
+    memory: "Every time I hear this, I think of you. When we started building our playlist, it was one you added. That makes it even more special to me."
   },
   {
     question: "There is something that I really want to get for you, give you. Do you know what it is?",
@@ -61,8 +61,40 @@ function loadQuestion() {
 function submitAnswer() {
   const inputElement = document.getElementById("answer");
   const hintElement = document.getElementById("hint");
-  const questionElement = document.getElementById("question");
 
-  if (!inputElement || !hintElement || !questionElement) return;
+  if (!inputElement || !hintElement) return;
 
   const input = inputElement.value.toLowerCase().trim();
+
+  const validAnswers = questions[current].answers;
+
+  const isCorrect = validAnswers.some(ans =>
+    input.includes(ans.toLowerCase())
+  );
+
+  if (isCorrect) {
+    hintElement.innerText = "Correct ❤️";
+
+    setTimeout(() => {
+      if (questions[current].memory) {
+        hintElement.innerText = questions[current].memory;
+      }
+
+      setTimeout(() => {
+        current++;
+
+        if (current >= questions.length) {
+          window.location.href = "final.html";
+        } else {
+          loadQuestion();
+        }
+      }, 900);
+
+    }, 600);
+
+  } else {
+    hintElement.innerText = questions[current].hint;
+  }
+}
+
+window.addEventListener("DOMContentLoaded", loadQuestion);
