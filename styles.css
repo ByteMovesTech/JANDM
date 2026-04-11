@@ -1,157 +1,25 @@
-/* =========================
-   GLOBAL RESET + BASE
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
-  color: white;
-  text-align: center;
-  overflow-x: hidden;
   background: #111;
-}
-
-/* =========================
-   LAYOUT HELPERS
-========================= */
-.center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 20px;
-}
-
-/* =========================
-   TYPOGRAPHY
-========================= */
-h1, h2, h3 {
-  line-height: 1.2;
-}
-
-p {
-  line-height: 1.6;
-  color: #f5dce6;
-  margin-top: 10px;
-}
-
-/* =========================
-   GLASS CARD SYSTEM
-========================= */
-.card {
-  width: 100%;
-  max-width: 700px;
-  padding: 40px 28px;
-  border-radius: 28px;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-}
-
-/* =========================
-   BUTTONS (GLOBAL)
-========================= */
-button {
-  padding: 12px 26px;
-  margin-top: 18px;
-  border: none;
-  border-radius: 999px;
-  cursor: pointer;
-  font-size: 1rem;
-  background: linear-gradient(135deg, #ff4f87, #ff6f91);
   color: white;
-  transition: all 0.25s ease;
-  box-shadow: 0 10px 25px rgba(255, 79, 135, 0.25);
-}
-
-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 35px rgba(255, 79, 135, 0.35);
-}
-
-button:active {
-  transform: scale(0.97);
-}
-
-/* =========================
-   INPUTS (GLOBAL)
-========================= */
-input {
-  width: 80%;
-  max-width: 320px;
-  padding: 14px;
-  margin-top: 15px;
-  border: none;
-  border-radius: 999px;
+  font-family: Arial;
   text-align: center;
-  font-size: 1rem;
-  outline: none;
 }
 
-/* =========================
-   COUNTDOWN SYSTEM
-========================= */
-.countdown {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(70px, 1fr));
-  gap: 14px;
-  margin-top: 25px;
+.center {
+  margin-top: 10%;
 }
 
-.time-box {
-  padding: 18px 10px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.12);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.12);
+input {
+  padding: 10px;
+  margin: 10px;
 }
 
-.number {
-  display: block;
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-shadow: 0 0 18px rgba(255,255,255,0.35);
-}
-
-.label {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #ffe9f1;
-}
-
-/* =========================
-   ANIMATIONS (FUTURE READY)
-========================= */
-.fade-in {
-  animation: fadeIn 1s ease forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* =========================
-   MOBILE OPTIMIZATION
-========================= */
-@media (max-width: 640px) {
-  .countdown {
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
-  }
-
-  .card {
-    padding: 30px 20px;
-  }
-
-  input {
-    width: 100%;
-  }
+button {
+  padding: 12px 24px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: #ff4f87;
+  color: white;
 }
