@@ -31,11 +31,17 @@ const questions = [
     memory: "Because I absolutely cherish you."
   },
   {
-    question: "What are we celebrating today?",
-    answers: ["anniversary", "2 years", "two years", "our anniversary"],
-    hint: "A milestone of us ❤️",
-    memory: "And I wouldn’t trade these two years for anything."
-  }
+    question: "We have discussed talking a vacation together. There are many many options and inwant to do every single one. What is one of the vacation ideas we have?",
+    answers: ["mexico", "Australia", "cruise", "anywhere"],
+    hint: "The destination is not important as being able to be with you! ❤️",
+    memory: "I will go anywhere with you. Wherever you are, is where I want to be."
+  },
+  {
+    question: "We love playing games together. The best part of playing these games is the time we spend together. That time is so precious to me. I love every moment I get to spend with you. I love you, Jaclyn. One of the newer games we have been playing is the cryptic crosswords. Inhave created a clue for you. I am confident you will totally nail it and get the answer. Here is the clue: A dance mixed up in a country (6)?",
+    answers: ["Canada", "canada"],
+    hint: "🎶 Oh... 🎶",
+    memory: "These puzzles are so much fun. I love working on them as a team and figuring them out. You are ao smart."
+}
 ];
 
 let current = 0;
